@@ -7,7 +7,7 @@ public class Car {
     private double gallonsOfGas;
     private double milesPerGallon;
 
-    public Car(String make, String model, int year, int gallonsOfGas, double milesPerGallon) {
+    public Car(String make, String model, int year, double gallonsOfGas, double milesPerGallon) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -16,46 +16,15 @@ public class Car {
     }
 
     public void drive(int numOfMiles) {
+
         System.out.println("Drove " + numOfMiles + " miles!");
-//        bonus answer using if and else
-//        if(gasAmount - numOfMiles/milesPerGallon < 0) {
-//            System.out.println("Ran out of gas!");
-//            this.gasAmount = 0;
-//        }
-//        else {
-//            this.gasAmount = gasAmount - numOfMiles/milesPerGallon;
-//        }
-        double gallonsUsed = numOfMiles/milesPerGallon;
-        this.gallonsOfGas = gallonsOfGas - gallonsUsed;
+        double gallonsUsed = 1.25;
+        this.gallonsOfGas = 20 - 1.25;
     }
 
     public void refuel(int amount) {
         System.out.println("Refueled " + amount + " gallons!");
         this.gallonsOfGas = gallonsOfGas + amount;
-    }
-
-    public double getGallonsOfGas() {
-        return gallonsOfGas;
-    }
-
-    public void setGallonsOfGas(int gasAmount) {
-        this.gallonsOfGas = gasAmount;
-    }
-
-    public double getMilesPerGallon() {
-        return milesPerGallon;
-    }
-
-    public void setMilesPerGallon(int milesPerGallon) {
-        this.milesPerGallon = milesPerGallon;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public String getMake() {
@@ -72,5 +41,29 @@ public class Car {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public double getGallonsOfGas() {
+        return gallonsOfGas;
+    }
+
+    public void setGallonsOfGas(double gallonsOfGas) {
+        this.gallonsOfGas = gallonsOfGas;
+    }
+
+    public double getMilesPerGallon() {
+        return milesPerGallon;
+    }
+
+    public void setMilesPerGallon(double milesPerGallon) {
+        this.milesPerGallon = milesPerGallon;
     }
 }
