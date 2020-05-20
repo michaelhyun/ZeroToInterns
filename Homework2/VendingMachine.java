@@ -3,12 +3,12 @@ package Homework2;
 public class VendingMachine {
     public static void main(String[] args) {
         VendingMachine machine = new VendingMachine();
+        machine.findItem(200);
+
         machine.findItem(100);
         machine.findItemsUsingSwitch(105);
         machine.findItemsUsingSwitch(100);
         machine.findItemsUsingSwitch(105);
-
-
     }
 
     public void findItemsUsingSwitch(int code) {
