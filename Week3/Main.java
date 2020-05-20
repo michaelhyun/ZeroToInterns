@@ -12,7 +12,7 @@ public class Main {
 //        Create a new promo code object, with a promoCode property (String) and a discountPercentage property (double)
         PromotionCode code = new PromotionCode("TWENTY", 0.20);
 
-//        Call cart's applyPromoCode method, but the method requires us to provide a PromoCode object. 
+//        Call cart's applyPromoCode method, but the method requires us to provide a PromoCode object.
         cart.applyPromoCode(code);
 
         System.out.println("The total amount is " + cart.getTotalAmount());
